@@ -14,7 +14,6 @@ class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   var temp;
   var desc;
@@ -41,11 +40,17 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("Weather App"),
+        backgroundColor: Colors.blue,
+        title: Row(
+          children: <Widget>[
+            Image(image:AssetImage('Assets/GDSC.jpeg'))
+            ,Text("  Weather App"),
+          ],
+        ),
         centerTitle: true,
+        
         ),
       body: Column(
         children: <Widget>[
